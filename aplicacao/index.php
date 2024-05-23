@@ -17,7 +17,7 @@ echo"$error";
 <body class="test">
     <!--Cabeçalho do Documento-->
     <header>
-        <a img src="../imag/bola.png" alt="logo" class="logoheader"></a>
+        <img src="../imag/bola.png" alt="logo" class="logoheader">
 
         <nav>
             <ul class="menuPrincipal">
@@ -48,14 +48,14 @@ echo"$error";
            
             
             <div class="formBox">
-                <label for="email" class="formLabel">
+                <label for="Email" class="formLabel">
                 E-mail: <input class="formInput" type="email" name="Email" id="Email" placeholder="Seu e-mail:" maxlength="60" required autofocus>
                 <img src="../imag/icons8-usuário-48.png" alt="usuario" class="imgLogin">
                 </label>
             </div>
 
             <div class="formBox">
-                <label for="password" class="formLabel">
+                <label for="Senha" class="formLabel">
                 <input class="formInput" type="password" name="Senha" id="Senha" placeholder="Sua senha" maxlength="20" required>
                 <img src="../imag/icons8-senha-48.png" alt="senha"><br>
                 </label>
