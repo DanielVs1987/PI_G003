@@ -1,0 +1,258 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+   
+    font-family: 'Stonersport-Regular';
+    src: url('../fontes/Team-Athletics-Freeware.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Fragmentcore';
+    src: url('../fontes/Fragmentcore.otf') format('truetype');
+}
+body {
+    min-height: 100vh;
+    background-image: url(../img/Quadras-Poliesportivas-1024x526.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+header{
+    width: 100vw;
+    height: 12vh;
+    background-image: url(../img/rede.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+    top: 0;
+
+    
+}
+.menuPrincipal{
+    display: flex;
+    align-items: center;
+    margin-right: 10vw;
+    
+    
+}
+.logoheader{
+    width: max(50px, 5vw);
+    height: auto;
+    margin-left: 5vw;
+    
+}
+.botaoMenu {
+    margin-left: 5vw;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+
+}
+.botaoMenu a {
+    text-decoration: none;
+    font-size: max(15px, 2vw);
+    font-family: 'Fragmentcore';
+    color: black;
+    
+}
+.botaoMenu a:hover{
+    text-decoration: underline;
+}
+.botaoMenu p {
+    font-size: max(15px, 2vw);
+    font-family: 'Fragmentcore';
+    
+}
+.login{ 
+    width: 350px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.048);
+
+    
+    
+  
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: 'Stonersport-Regular';
+    text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.inputConteiner{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30Px 0;
+
+}
+.inputConteiner input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 20px 45px 20px 20px;
+    font-family: 'Fragmentcore';
+    
+    
+
+}
+.inputConteiner img {
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+.inputConteiner a {
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Fragmentcore';
+
+}
+.inputConteiner a:hover{
+    text-decoration: underline;
+}
+.botaoEnviar{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(0, 199, 0);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Fragmentcore';
+    color: black;
+}
+.botaoEnviar:hover {
+    background-color: rgba(0, 199, 0, 0.829);
+    
+}
+.registrar{
+    font-size: 18px;
+    color: white;
+    font-family: 'Fragmentcore';
+
+}
+.registrar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Fragmentcore';
+
+}
+.registrar a:hover{
+    text-decoration: underline;
+
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+
+}
+.linksFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+
+}
+.redesSociais {
+    display: flex;
+    list-style: none;
+}
+.termos {
+    list-style: none;
+    display: flex;
+
+}
+.termosTexto {
+    margin: 10px;
+    font-size: 10px;
+    font-family: 'Stonersport-Regular';
+    color: black;
+    text-decoration: none;
+}
+@media screen and (min-width: 320px) {
+    .termosTexto {
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    termosTexto {
+        font-size: 15px;
+    }
+}
+.termosTexto:hover {
+    text-decoration: underline;
+}
+.contfooter {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+
+
+}
+.contfooter p {
+    font-size: min(15px, 2vw);
+
+}
+
+.iconRedes {
+    width: min(50px, 7vw);
+}
+.mensagem {
+    font-family: 'Fragmentcore';
+    margin-top: 15px;
+    font-size: 17px;
+    width: 150px;
+    color: white;
+
+}
+
+.consultaReserva { 
+    width: 350px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.048);
+    flex-direction: column;
+
+}
+

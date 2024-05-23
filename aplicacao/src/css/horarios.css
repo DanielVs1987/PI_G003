@@ -1,0 +1,281 @@
+@font-face {
+
+    font-family: 'Stonersport-Regular';
+    src: url('../fontes/Team-Athletics-Freeware.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Fragmentcore';
+    src: url('../fontes/Fragmentcore.otf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*configuração de fundo ideal para imagens*/
+body {
+    min-height: 100vh;
+    background-image: url(../img/vistaComplexo.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+
+}
+header {
+    width: 100vw;
+    height: 12vh;
+    background-image: url(../img/rede.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.logoheader {
+    width: max(50px, 5vw);
+    height: auto;
+    margin-left: 5vw;
+
+}
+
+.sair {
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(0, 199, 0, 0);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 35px;
+    font-family: 'Fragmentcore';
+    color: black;
+    align-items: center;
+
+}
+
+.sair:hover {
+    background-color: rgb(0, 199, 0);
+    ;
+}
+.menuHorarios {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+
+
+}
+.diaSemana {
+    width: 150px;
+    background-color: yellow;
+    font-family: 'Fragmentcore';
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.horarios {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(0, 199, 0);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Fragmentcore';
+    color: black;
+}
+.horarios:hover {
+    background-color: rgba(0, 86, 199, 0.829);
+}
+.menuPrincipal {
+    display: flex;
+    align-items: center;
+    margin-right: 10vw;
+    flex-direction: row-reverse
+}
+.botaoMenu {
+    margin-left: 5vw;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+    .botaoMenu {
+        font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .botaoMenu {
+        font-size: 35px;
+    }
+}
+.botaoMenu a {
+    text-decoration: none;
+    font-size: ;
+    font-family: 'Stonersport-Regular';
+    color: black;
+
+}
+.botaoMenu a:hover {
+    text-decoration: underline;
+}
+.botaoMenu p {
+    font-size: 15px;
+    font-family: 'Fragmentcore';
+
+}
+.mainmenubtn {
+    background-color: rgb(0, 199, 0);
+    width: 200px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Stonersport-Regular';
+    color: black;
+    font-size: 20px;
+}
+.mainmenubtn:hover {
+    background-color: blue;
+    color: white;
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+}
+
+.dropdown-child {
+    display: none;
+    background-color: rgb(0, 199, 0);
+    min-width: 200px;
+    border-radius: 0px 10px 10px 0px;
+}
+.dropdown-child a {
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Fragmentcore';
+    font-size: 20px;
+}
+.dropdown-child a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+.dropdown:hover .dropdown-child {
+    display: block;    
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+
+}
+.linksFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+
+}
+.redesSociais {
+    display: flex;
+    list-style: none;
+}
+.termos {
+    list-style: none;
+    display: flex;
+
+}
+.termosTexto {
+    margin: 10px;
+    font-size: 10px;
+    font-family: 'Stonersport-Regular';
+    color: black;
+    text-decoration: none;
+}
+@media screen and (min-width: 320px) {
+    .termosTexto {
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    termosTexto {
+        font-size: 15px;
+    }
+}
+.termosTexto:hover {
+    text-decoration: underline;
+}
+.contfooter {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+
+
+}
+.contfooter p {
+    font-size: min(15px, 2vw);
+
+}
+
+.iconRedes {
+    width: min(50px, 7vw);
+}
+.cofirmar {
+    align-items: left;
+}
+.confirmar {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(0, 199, 0);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Fragmentcore';
+    color: black;
+}
+.confirmar:hover {
+    background-color: rgba(0, 86, 199, 0.829);
+}
+.mensagem {
+    font-family: 'Fragmentcore';
+    margin-top: 15px;
+    font-size: 17px;
+    width: 150px;
+    color: white;
+
+}
+.saldacao {
+
+    font-family: 'Fragmentcore';
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 25px;
+    width: 150px;
+    color: white;
+
+}
