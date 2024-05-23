@@ -17,7 +17,7 @@ echo"$error";
 <body class="test">
     <!--Cabeçalho do Documento-->
     <header>
-        <img src="../imag/bola.png" alt="logo" class="logoheader"></a>
+        <a img src="../imag/bola.png" alt="logo" class="logoheader"></a>
 
         <nav>
             <ul class="menuPrincipal">
@@ -67,7 +67,7 @@ echo"$error";
             </div>
             <div class="formBoxExtra" id="formBoxExtra">
                 
-                <a class="formLinkExtra"href="cadastrar.php">Cadastrar</a>
+                <a class="formLinkExtra" href="cadastrar.php">Cadastrar</a>
             </div>
             <p><?php echo $error; ?></p> 
 
