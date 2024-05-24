@@ -1,7 +1,45 @@
+ <?php
 
-<?php
-include("oplogin.php");
-echo"$error";
+require_once "config.php";
+
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $Email = htmlspecialchars(strip_tags($_POST['Email']));
+    $Senha = htmlspecialchars(strip_tags($_POST['Senha']));
+
+    $sql = "SELECT * FROM usuarios WHERE Email = ?";
+
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("s", $Email);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows === 1) {
+            $row = $result->fetch_assoc();
+
+            if (password_verify($Senha, $row['Senha'])) {
+                $_SESSION["loggedin"] = true;
+                $_SESSION["email"] = $Email; // Armazena o email na sessão
+                header("Location: site.php");
+                exit;
+            } else {
+                $_SESSION["error"] = "Senha Incorreta!";
+                header("Location: index.php");
+                exit;
+            }
+        } else {
+            $_SESSION["error"] = "Usuário Não Encontrado!";
+            header("Location: index.php");
+            exit;
+        }
+    } else {
+        $error = "Erro ao preparar a consulta SQL";
+    }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -68,8 +106,8 @@ echo"$error";
             <div class="formBoxExtra" id="formBoxExtra">
                 
                 <a class="formLinkExtra" href="cadastrar.php">Cadastrar</a>
-            </div>
-            <p><?php echo $error; ?></p> 
+            </div class="mensagemdeerror">
+            <p class="mensagemdeerror"><?php echo isset($_SESSION["error"]) ? $_SESSION["error"] : ""; unset($_SESSION["error"]); ?></p>
 
         </form>
     </main>

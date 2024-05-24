@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
         $c_quadras = $row["idQuadras"];
     }
 } else {
-    echo " <h1>Você não tem reservas!!<h1>' ";
+    echo "<script>alert('Você não tem reservas!'); window.location.href='site.php';</script>";
     header("Refresh:1; url=site.php");
 }
 

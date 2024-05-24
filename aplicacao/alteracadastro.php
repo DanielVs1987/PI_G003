@@ -1,7 +1,5 @@
 <?php
 
-
-
 require_once "config.php";
 
 //busca o email do usuario logado
@@ -64,8 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             echo "<script>document.addEventListener('DOMContentLoaded', function() { 
-                document.getElementById('mensagemErro').textContent = 'Cadastro Atualizado Com Sucesso!';});</script>";
-            header("Refresh:3; url=alteracadastro.php");
+                document.getElementById('mensagemErro').textContent = 'Cadastro Atualizado Com Sucesso! Faça o login Novamente!';});</script>";
+            header("Refresh:3; url=index.php");
         } else {
             echo "<script>document.addEventListener('DOMContentLoaded', function() { 
                 document.getElementById('mensagemErro').textContent = 'Insira os dados antes de enviar!';});</script>";
